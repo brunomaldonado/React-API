@@ -1,6 +1,6 @@
 import React, { useState, useEffect} from 'react'
 import axios from 'axios'
-import { img_300, unavailable } from '../../Config/config';
+import { img_300, unavailable } from '../../Config/Config';
 
 function Nowplaying() {
   const [content, setContent] = useState([]);

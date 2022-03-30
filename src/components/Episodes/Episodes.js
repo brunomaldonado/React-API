@@ -1,6 +1,6 @@
 import React, { useState, useEffect}from 'react'
 import axios from 'axios'
-import { img_300, notAvailable } from '../../Config/config';
+import { img_300, notAvailable } from '../../Config/Config';
 
 function Episodes({
   id,

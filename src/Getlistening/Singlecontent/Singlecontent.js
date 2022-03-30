@@ -1,6 +1,6 @@
 import React from 'react'
 import './Singlecontent.css'
-import { img_300, notAvailable } from '../../Config/config';
+import { img_300, notAvailable } from '../../Config/Config';
 
 function singlecontent({
   name,
