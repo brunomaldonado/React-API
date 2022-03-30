@@ -7,20 +7,18 @@ const TerserWebpackPlugin = require('terser-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
-  context: __dirname + '/src',
   entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
     publicPath: '/'
   },
-  mode: 'production',
   resolve: {
     extensions: ['.js', '.jsx']
   },
   module: {
     rules: [{
-      test: /\.(js|jsx)$/,
+      test: /\.m?js$/,
       exclude: /node_modules/,
       use: {
         loader: 'babel-loader',
@@ -42,6 +40,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
+      inject: "body",
       template: './public/index.html',
       filename: './index.html',
     }),
