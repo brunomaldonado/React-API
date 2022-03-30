@@ -1,4 +1,5 @@
-import { configureStore } from "@reduxjs/toolkit";
+import { configureStore, getDefaultMiddleware } from "@reduxjs/toolkit";
+// import longer from 'redux-logger'
 import seriesReducer from './Serieslice/Serieslice';
 
 export const store = configureStore({
@@ -7,3 +8,7 @@ export const store = configureStore({
     movies: seriesReducer
   },
 });
+// export const store = configureStore({
+//   reducer: seriesReducer,
+//   middleWare: (getDefaultMiddleware) => getDefaultMiddleware().concat(logger),
+// });
